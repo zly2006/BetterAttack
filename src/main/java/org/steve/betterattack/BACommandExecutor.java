@@ -20,6 +20,13 @@ public class BACommandExecutor implements CommandExecutor {
         this.plugin=plugin;
     }
 
+    public static List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+        List<String> ret=new ArrayList<>();
+        ret.add("cp");
+        ret.add("help");
+        return ret;
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
         if(cmd.getName().equals("betterattack")){

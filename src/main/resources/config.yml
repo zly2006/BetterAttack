@@ -6,6 +6,10 @@ weapon:
       star: 1
       #伤害值，必须
       damage: 5
+      #攻速
+      attack_speed: 1.6
+      #耐久
+      durability: 50
       #攻击成功率加成(反闪避)
       success_attack_possibility_add: 0
       #暴击率
@@ -16,3 +20,7 @@ weapon:
       level_repression: -0.01
       #等级压制上限
       level_repression_limit: 0
+      #附魔属性(原版)
+      enchant:
+          -  unbreaking:
+                 1

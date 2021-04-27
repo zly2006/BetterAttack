@@ -1,7 +1,5 @@
 package org.steve.betterattack;
 
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -10,7 +8,7 @@ public class Main extends JavaPlugin {
         if (!getServer().getPluginManager().isPluginEnabled("Essential")){
 
         }
-        GUI.setPlugin(this);
+        GUI.init(this);
         this.getCommand("betterattack").setExecutor(new BACommandExecutor(this));
         this.getServer().getPluginManager().registerEvents(new AttackListener(),this);
         this.getServer().getPluginManager().registerEvents(new GUIListener(),this);

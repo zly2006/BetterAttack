@@ -23,7 +23,7 @@ public class GUI {
     static ItemStack HelpPage;
 
 
-    static void setPlugin(Main _plugin){
+    static void init(Main _plugin){
         plugin=_plugin;
         HelpPage=new ItemStack(Material.WRITTEN_BOOK);
         {
@@ -33,6 +33,8 @@ public class GUI {
                     "权限节点:只有一个betterattack.use  指定了插件是否会监听其动作\n\n命令：/betterattack cp打开主菜单\n使用geyser的基岩版用户可能会显示错位，可使用经典UI档案",
                     ""
             );
+            bm.setAuthor("Steve");
+            bm.setTitle("BetterAttack插件使用指南");
             HelpPage.setItemMeta(bm);
         }
 

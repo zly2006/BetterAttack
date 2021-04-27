@@ -26,6 +26,7 @@ public class GUIListener implements Listener {
                 case 0:
                     player.closeInventory();
                     player.openBook(GUI.HelpPage);
+                    player.getInventory().addItem(GUI.HelpPage);
                     break;
                 default:
                     break;

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="[攻击强化] BetterAttack">
+    <output-path>$PROJECT_DIR$/out/artifacts/BetterAttack</output-path>
+    <root id="archive" name="[攻击强化] BetterAttack.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <element id="module-output" name="BetterAttack" />
+    </root>
+  </artifact>
+</component>

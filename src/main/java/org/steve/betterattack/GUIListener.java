@@ -35,7 +35,7 @@ public class GUIListener implements Listener {
             int click=event.getRawSlot();
             if(click>2&&click<9)event.setCancelled(true);
             if(click>11&&click<18)event.setCancelled(true);
-            if(click>20)event.setCancelled(true);
+            if(click>20&&click<27)event.setCancelled(true);
             if(click==17){
                 player.closeInventory();
             }

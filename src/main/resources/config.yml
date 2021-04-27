@@ -1,0 +1,18 @@
+#添加武器
+weapon:
+  #名字
+  - wooden_sword:
+      #星级(1-5)，必须
+      star: 1
+      #伤害值，必须
+      damage: 5
+      #攻击成功率加成(反闪避)
+      success_attack_possibility_add: 0
+      #暴击率
+      crit_possibility: 1
+      #暴击加成系数(0.5就是多50%伤害)
+      crit_damage: 0.5
+      #等级压制系数(可以是负数，等级低的玩家更容易胜利)高一级伤害多的系数
+      level_repression: -0.01
+      #等级压制上限
+      level_repression_limit: 0

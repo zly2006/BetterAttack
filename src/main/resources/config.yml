@@ -29,11 +29,14 @@ weapon:
 
 #添加rpg游戏场地
 game_field:
+  #id
   - field_1:
     #场地名称
-    name: Test1
+    name: 测试1
     #场地长方形区域确定
-    start_coordinates: {100,300} #起始点坐标
-    end_coordinates: {200,300} #结束点坐标
+    start_coordinates: [100,300] #起始点坐标
+    end_coordinates: [200,300] #结束点坐标
     is_available: true #是否开放给玩家，如果不开放，在尝试进入时提示下面内容
-    closed_warning: 本区域暂未开放，换一个试试吧!
+    closed_message: 本区域暂未开放，换一个试试吧!
+    allow_build_y: [0,0] #左闭右开区间，表示了哪个y坐标区域允许玩家建造
+

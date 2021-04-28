@@ -24,5 +24,5 @@ weapon:
       level_repression_limit: 0
       #附魔属性(原版)
       enchant:
-          -  unbreaking:
-                 1
+        - unbreaking:
+            1

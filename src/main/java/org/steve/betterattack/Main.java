@@ -5,10 +5,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main extends JavaPlugin {
     FileConfiguration config;
+    Map<String,Weapons>RegisteredWeapons=new HashMap<>();
+    Map<String,Items>RegisteredItems=new HashMap<>();
     @Override
     public void onEnable(){
         if (!getServer().getPluginManager().isPluginEnabled("Essential")){
@@ -23,7 +29,11 @@ public class Main extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new PlayerEvents(),this);
 
         config = this.getConfig();
+        if (new File("plugins\\BetterAttack\\config.yml")==null){
+            this.saveConfig();
+        }
         try {
+            Map<String,Object>weapons=config.getConfigurationSection("weapon").getValues(false);
 
         }
         catch (Exception exception){

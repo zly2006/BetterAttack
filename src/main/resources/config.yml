@@ -13,9 +13,9 @@ weapon:
       #耐久
       durability: 50
       #攻击成功率加成(反闪避)
-      success_attack_possibility_add: 0
+      success_attack_rate_add: 0
       #暴击率
-      crit_possibility: 1
+      crit_rate: 0.05
       #暴击加成系数(0.5就是多50%伤害)
       crit_damage: 0.5
       #等级压制系数(可以是负数，等级低的玩家更容易胜利)高一级伤害多的系数

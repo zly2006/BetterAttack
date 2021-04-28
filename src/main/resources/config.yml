@@ -26,3 +26,14 @@ weapon:
       enchant:
         - unbreaking:
             1
+
+#添加rpg游戏场地
+game_field:
+  - field_1:
+    #场地名称
+    name: Test1
+    #场地长方形区域确定
+    start_coordinates: {100,300} #起始点坐标
+    end_coordinates: {200,300} #结束点坐标
+    is_available: true #是否开放给玩家，如果不开放，在尝试进入时提示下面内容
+    closed_warning: 本区域暂未开放，换一个试试吧!

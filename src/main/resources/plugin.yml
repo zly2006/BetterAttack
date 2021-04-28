@@ -8,9 +8,13 @@ commands:
   betterattack:
     usage: 命令格式错误，请使用/betterattack help
     permission: betterattack.use
+    aliases:
+      - ba
   betterattackadmin:
     usage: use /betterattackadmin help
     permission: betterattack.admin
+    aliases:
+      - baa
 
 permissions:
   betterattack.*:

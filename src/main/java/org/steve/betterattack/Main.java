@@ -16,6 +16,7 @@ public class Main extends JavaPlugin {
         }
 
         GUI.init(this);
+        this.getCommand("betterattackadmin").setExecutor(new AdminCommandExecutor());
         this.getCommand("betterattack").setExecutor(new BACommandExecutor(this));
         this.getServer().getPluginManager().registerEvents(new AttackListener(),this);
         this.getServer().getPluginManager().registerEvents(new GUIListener(),this);

@@ -7,12 +7,17 @@ api-version: 1.16
 commands:
   betterattack:
     usage: 命令格式错误，请使用/betterattack help
-    permission: BetterAttack.use
+    permission: betterattack.use
+  betterattackadmin:
+    usage: use /betterattackadmin help
+    permission: betterattack.admin
 
 permissions:
   betterattack.*:
-    description: 使用攻击强化的权限
     children:
       betterattack.use: true
+      betterattack.admin: true
   betterattack.use:
     default: true
+  betterattack.admin:
+    default: op

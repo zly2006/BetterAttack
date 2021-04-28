@@ -2,11 +2,9 @@ package org.steve.betterattack;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.IOException;
 import java.util.List;
 
 public class Main extends JavaPlugin {
@@ -24,12 +22,16 @@ public class Main extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new PlayerEvents(),this);
 
         config = this.getConfig();
+        try {
 
+        }
+        catch (Exception exception){
+
+        }
     }
 
     @Override
     public void onDisable(){
-        this.saveConfig();
     }
 
     @Override

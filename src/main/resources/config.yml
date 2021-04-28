@@ -2,6 +2,8 @@
 weapon:
   #名字
   - wooden_sword:
+      #名字，必须
+      name: 桃木剑
       #星级(1-5)，必须
       star: 1
       #伤害值，必须

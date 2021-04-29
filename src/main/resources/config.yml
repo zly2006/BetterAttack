@@ -6,8 +6,10 @@ weapon:
     name: 桃木剑
     #星级(1-5)，必须
     star: 1
+    #材质，必须
+    material: wooden_sword
     #伤害值，必须
-    damage: 
+    damage:
       value: 5
       add_per_level: 0
     #攻速
@@ -46,6 +48,7 @@ weapon:
   stone_sword:
     name: 石中剑
     star: 2
+    material: stone_sword
     damage: 
       value: 6
       add_per_level: 0
@@ -77,6 +80,7 @@ weapon:
   diamond_sword:
     name: 流星战刃
     star: 5
+    material: iron_sword
     damage: 
       value: 15
       add_per_level: 0

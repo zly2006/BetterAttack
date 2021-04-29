@@ -13,5 +13,6 @@ public class Weapons {
 
     public Weapons(Main plugin, ConfigurationSection config){
         this.plugin=plugin;
+
     }
 }

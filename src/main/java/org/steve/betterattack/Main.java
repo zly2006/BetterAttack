@@ -35,6 +35,7 @@ public class Main extends JavaPlugin {
         try {
             Map<String,Object>weapons=config.getConfigurationSection("weapon").getValues(false);
 
+
         }
         catch (Exception exception){
 

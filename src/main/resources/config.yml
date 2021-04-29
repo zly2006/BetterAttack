@@ -21,10 +21,46 @@ weapon:
     #等级压制系数(可以是负数，等级低的玩家更容易胜利)高一级伤害多的系数
     level_repression: -0.01
     #等级压制上限
-    level_repression_limit: 0
+    level_repression_limit:
+      value: 0
+      add_per_level: 0
     #附魔属性(原版)
     enchant:
       unbreaking:
+        1
+
+  stone_sword:
+    name: 石中剑
+    star: 2
+    damage: 6
+    attack_speed: 2.2
+    durability: 75
+    success_attack_rate_add: 0.05
+    crit_rate: 0.15
+    crit_damage: 0.5
+    level_repression: 0
+    level_repression_limit:
+      value: 0
+      add_per_level: 1
+    enchant:
+      sharpness:
+        1
+
+  diamond_sword:
+    name: 流星战刃
+    star: 5
+    damage: 15
+    attack_speed: 4
+    durability: 1800
+    success_attack_rate_add: 0.05
+    crit_rate: 0.4
+    crit_damage: 0.75
+    level_repression: 0.4
+    level_repression_limit:
+      value: 8
+      add_per_level: 1
+    enchant:
+      fire_aspect:
         1
 
 #添加rpg游戏场地

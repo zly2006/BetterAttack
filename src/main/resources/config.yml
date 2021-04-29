@@ -16,7 +16,7 @@ weapon:
       add_per_level: 0
     #耐久
     durability: 
-      value:50
+      value: 50
       add_per_level: 0
     #攻击成功率加成(反闪避)
     success_attack_rate_add: 

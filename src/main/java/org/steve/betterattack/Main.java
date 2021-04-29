@@ -6,10 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main extends JavaPlugin {
     FileConfiguration config;
@@ -33,7 +30,10 @@ public class Main extends JavaPlugin {
             this.saveConfig();
         }
         try {
-            Map<String,Object>weapons=config.getConfigurationSection("weapon").getValues(false);
+            Set<String> weapons=config.getConfigurationSection("weapon").getValues(false).keySet();
+            for (String path: weapons) {
+
+            }
 
 
         }

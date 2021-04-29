@@ -104,7 +104,35 @@ weapon:
     enchant:
       fire_aspect:
         1
-
+#素材和资源
+item:
+  #id
+  packed_wood:
+    #显示的名字
+    name: 压缩木头
+    #星级(1-5)
+    star: 1
+    #描述
+    description: 厚重的感觉，一看就可以制造更好的武器
+    #使用材质，原版id
+    material: oak_wood
+#合成配方
+recipe:
+  #id
+  craft_wooden_sword:
+    #是否有序的配方
+    ordered: true
+    #由插件提供的物品，必须添加ba.
+    0: air
+    1: ba.packed_wood
+    2: air
+    3: air
+    4: ba.packed_wood
+    5: air
+    6: air
+    7: stick
+    8: air
+    result: ba.wooden_sword
 #添加rpg游戏场地
 game_field:
   #id

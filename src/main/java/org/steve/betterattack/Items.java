@@ -2,9 +2,11 @@ package org.steve.betterattack;
 
 import net.minecraft.server.v1_16_R3.NBTTagCompound;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.persistence.PersistentDataType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,7 @@ public class Items {
     String displayName;
     String description;
     Material material;
-    public Items(ConfigurationSection config){
+    public Items(Main plugin,ConfigurationSection config){
         id=config.getName();
         displayName=config.getString("name");
         material=Material.getMaterial(config.getString("material").toUpperCase());
@@ -32,8 +34,7 @@ public class Items {
         lore.add(s);
         lore.add(description);
         im.setLore(lore);
-        NBTTagCompound tagCompound=new NBTTagCompound();
-        tagCompound.setString("baid",id);
+        im.getPersistentDataContainer().set(new NamespacedKey(plugin,"id"), PersistentDataType.STRING,id);
         itemStack.setItemMeta(im);
     }
     public ItemStack getItemStack(){

@@ -1,8 +1,10 @@
 package org.steve.betterattack;
 
 import org.bukkit.Material;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
+import org.steve.betterattack.Exception.InvalidMaterialException;
 
 public class Weapons {
     Main plugin;
@@ -27,7 +29,7 @@ public class Weapons {
     double LevelRepressionLimit=0;
     final ItemStack itemStack;
 
-    public Weapons(Main plugin, ConfigurationSection config){
+    public Weapons(Main plugin, ConfigurationSection config) throws InvalidMaterialException {
         this.plugin=plugin;
         id=config.getName();
         material=Material.getMaterial(config.getString("material"));
@@ -44,6 +46,9 @@ public class Weapons {
         }
 
         itemStack=new ItemStack(material);
+        if (itemStack.getItemMeta().getAttributeModifiers(Attribute.GENERIC_ATTACK_DAMAGE)==null){
+            throw new InvalidMaterialException(material);
+        }
         String s="";
         for(int i=0;i<star;i++)s+='★';
 

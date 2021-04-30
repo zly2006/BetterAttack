@@ -116,7 +116,7 @@ item:
     name: 压缩木头
     #星级(1-5)
     star: 1
-    #描述
+    #描述，可选
     description: 厚重的感觉，一看就可以制造更好的武器
     #使用材质，原版id
     material: oak_wood

@@ -9,6 +9,7 @@ public class Weapons {
     String displayName;
     int star;
     Material material;
+    String id;
     double damage;
     double damageLevelAdd=0;
     double attackSpeed=1.6;
@@ -24,16 +25,26 @@ public class Weapons {
     double LevelRepression=0;
     double LevelRepressionLevelAdd=0;
     double LevelRepressionLimit=0;
-    double LevelRepressionLimitLevelAdd=0;
     final ItemStack itemStack;
 
     public Weapons(Main plugin, ConfigurationSection config){
         this.plugin=plugin;
+        id=config.getName();
         material=Material.getMaterial(config.getString("material"));
+        star=config.getInt("star");
+        displayName=config.getString("name");
+        if (config.contains("level_repression_limit")){
+            LevelRepressionLimit=config.getDouble("level_repression_limit");
+        }
+        damage=((ConfigurationSection) config.get("damage")).getDouble("value");
+        damageLevelAdd=((ConfigurationSection) config.get("damage")).getDouble("add_per_level");
+        if (config.contains("attack_speed")){
+            attackSpeed=((ConfigurationSection) config.get("attack_speed")).getDouble("value");
+            attackSpeedLevelAdd=((ConfigurationSection) config.get("attack_speed")).getDouble("add_per_level");
+        }
 
         itemStack=new ItemStack(material);
         String s="";
-        star=config.getInt("star");
         for(int i=0;i<star;i++)s+='★';
 
 

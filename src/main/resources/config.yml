@@ -37,9 +37,7 @@ weapon:
       value: -0.01
       add_per_level: 0
     #等级压制上限
-    level_repression_limit:
-      value: 0
-      add_per_level: 0
+    level_repression_limit: 0
     #附魔属性(原版)
     enchant:
       unbreaking:
@@ -70,9 +68,7 @@ weapon:
     level_repression: 
       value: 0
       add_per_level: 0
-    level_repression_limit:
-      value: 0
-      add_per_level: 1
+    level_repression_limit: 0
     enchant:
       sharpness:
         1
@@ -102,9 +98,7 @@ weapon:
     level_repression: 
       value: 0.4
       add_per_level: 0
-    level_repression_limit:
-      value: 8
-      add_per_level: 1
+    level_repression_limit: 8
     enchant:
       fire_aspect:
         1

@@ -80,7 +80,7 @@ weapon:
   diamond_sword:
     name: 流星战刃
     star: 5
-    material: iron_sword
+    material: diamond_sword
     damage: 
       value: 15
       add_per_level: 0

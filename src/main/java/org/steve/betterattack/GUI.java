@@ -16,7 +16,7 @@ public class GUI {
     static Main plugin;
     static List<String>PageNames;
 
-    static Inventory MainPage;
+    public static Inventory MainPage;
     static String MainPageTitle;
     static Inventory CraftingPage;
     static String CraftingPageTitle;

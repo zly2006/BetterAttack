@@ -1,10 +1,10 @@
-package org.steve.betterattack;
+package org.steve.betterattack.Listener;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 
-public class PlayerEvents implements Listener {
+public class PlayerEventsListener implements Listener {
     @EventHandler
     public void onPlayerLogin(PlayerLoginEvent event){
         event.getPlayer().sendMessage(new String[]{"欢迎使用攻击强化插件","此插件正在测试，欢迎反馈bug"});

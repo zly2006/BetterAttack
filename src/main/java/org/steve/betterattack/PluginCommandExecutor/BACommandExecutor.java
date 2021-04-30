@@ -1,4 +1,4 @@
-package org.steve.betterattack;
+package org.steve.betterattack.PluginCommandExecutor;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -9,6 +9,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.steve.betterattack.GUI;
+import org.steve.betterattack.Main;
 
 import java.util.ArrayList;
 import java.util.List;

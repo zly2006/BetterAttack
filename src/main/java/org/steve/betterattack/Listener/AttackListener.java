@@ -1,4 +1,4 @@
-package org.steve.betterattack;
+package org.steve.betterattack.Listener;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

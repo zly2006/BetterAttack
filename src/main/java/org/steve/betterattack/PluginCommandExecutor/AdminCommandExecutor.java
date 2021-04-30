@@ -1,4 +1,4 @@
-package org.steve.betterattack;
+package org.steve.betterattack.PluginCommandExecutor;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

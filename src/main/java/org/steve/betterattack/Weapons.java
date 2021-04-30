@@ -35,6 +35,7 @@ public class Weapons {
         material=Material.getMaterial(config.getString("material"));
         star=config.getInt("star");
         displayName=config.getString("name");
+
         if (config.contains("level_repression_limit")){
             LevelRepressionLimit=config.getDouble("level_repression_limit");
         }

@@ -4,6 +4,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.steve.betterattack.Listener.AttackListener;
+import org.steve.betterattack.Listener.PlayerEventsListener;
+import org.steve.betterattack.PluginCommandExecutor.AdminCommandExecutor;
+import org.steve.betterattack.PluginCommandExecutor.BACommandExecutor;
 
 import java.io.File;
 import java.util.*;
@@ -23,11 +27,11 @@ public class Main extends JavaPlugin {
         this.getCommand("betterattack").setExecutor(new BACommandExecutor(this));
         this.getServer().getPluginManager().registerEvents(new AttackListener(),this);
         this.getServer().getPluginManager().registerEvents(new GUIListener(),this);
-        this.getServer().getPluginManager().registerEvents(new PlayerEvents(),this);
+        this.getServer().getPluginManager().registerEvents(new PlayerEventsListener(),this);
 
         config = this.getConfig();
         if (new File("plugins\\BetterAttack\\config.yml")==null){
-            this.saveConfig();
+            this.saveDefaultConfig();
         }
         try {
             Set<String> weapons=config.getConfigurationSection("weapon").getValues(false).keySet();
